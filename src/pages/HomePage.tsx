@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { ShoppingItems } from "../components/ShoppingItems";
-import { loadProducts } from "../redux/Slice/ProductsSlice.tsx";
-import { RootState } from "../redux/Store.tsx";
+import { loadProducts } from "../redux/Slice/ProductsSlice";
+import { RootState } from "../redux/Store";
 
 export const HomePage = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ export const HomePage = () => {
   const status = useSelector((state: RootState) => state.products.status);
 
   useEffect(() => {
-    dispatch(loadProducts());
+    dispatch(loadProducts() as any);
   }, [dispatch]);
 
   if (status === 'loading') return <div>Loading...</div>;
@@ -20,7 +20,7 @@ export const HomePage = () => {
   return (
     <div className="section grid lg:grid-cols-3 md:grid-cols-2 gap-6">
       {products.map((item) => (
-        <ShoppingItems key={item.id} item={item}/>
+        <ShoppingItems key={item.id} item={{...item, amount: 1}} />
       ))}
     </div>
   );

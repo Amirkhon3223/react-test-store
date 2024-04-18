@@ -1,5 +1,5 @@
-import { add } from "../redux/Slice/CartState.tsx";
-import { loadProducts } from "../redux/Slice/ProductsSlice.tsx";
+import { add } from "../redux/Slice/CartState";
+import { loadProducts } from "../redux/Slice/ProductsSlice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/Store.tsx";
@@ -14,10 +14,11 @@ export const ProductDetails = () => {
   const status = useSelector((state: RootState) => state.products.status);
 
   useEffect(() => {
-    if (!product) {
-      dispatch(loadProducts(id));
-    }
-  }, [dispatch, id, product]);
+    const fetchData = async () => {
+      await dispatch(loadProducts() as any);
+    };
+    fetchData();
+  }, [dispatch]);
 
   if (status === 'loading') return <div>Loading...</div>;
   if (!product) return <div>Product not found</div>;
@@ -42,7 +43,7 @@ export const ProductDetails = () => {
         <div className="max-w-[400px] mb-4">
           <p className="mb-4">{product.description}</p>
           <button className="bg-grey p-3 button hover:bg-transparentDark hover:text-grey transition"
-                  onClick={() => dispatch(add(product))}
+                  onClick={() => dispatch(add({ ...product, amount: 1 }))}
           >Add To Cart
           </button>
         </div>

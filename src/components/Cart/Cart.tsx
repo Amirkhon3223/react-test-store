@@ -12,7 +12,7 @@ export const Cart = () => {
 
   return (
     <>
-      <div className="bg-transparentDark fixed z-30 top-0 left-0 w-full h-screen">
+      <div className="bg-transparentDark fixed z-30 top-0 left-0 w-full h-screen ">
         <div className="h-full bg-grey sm:w-[40rem] min-w-[15rem] overflow-y-auto">
           <div className="p-6">
             <div className="flex items-center justify-between">
@@ -23,7 +23,7 @@ export const Cart = () => {
                 <span className="uppercase text-[0.9rem] select-none">Продолжить покупку</span>
               </div>
               <div>
-                Ваш багаж покупки ({cartItems.reduce((total, item) => total + item.amount, 0)})
+                Shopping Bag ({cartItems.reduce((total, item) => total + item.amount, 0)})
               </div>
             </div>
           </div>
