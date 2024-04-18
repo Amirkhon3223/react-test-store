@@ -21,7 +21,6 @@ export const Navbar = () => {
       <div
         className={`${scroll ? "bg-grey shadow-md" : "shadow-none"} fixed top-0 left-0 w-full z-20 transition duration-300`}>
         <div className="flex items-center justify-between container py-4 px-2 mx-auto text-gray-800">
-          {/* Обновленная часть для перехода на главную */}
           <Link to="/" className="font-bold text-xl">
             Store-Test
           </Link>
