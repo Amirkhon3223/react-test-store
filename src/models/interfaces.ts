@@ -6,6 +6,11 @@ export interface Products {
   description?: string;
 }
 
+export interface CartSlice {
+  cartItems: CartItem[];
+  total: number;
+}
+
 export interface CartItem extends Products {
   amount: number;
 }

@@ -1,7 +1,13 @@
+/**
+ * @fileoverview Управление состоянием данных о продуктах в приложении с использованием Redux Toolkit.
+ * Включает асинхронные действия для получения данных о продуктах и обновления состояния Redux.
+ *
+ * @module ProductsSlice
+ */
+
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { fetchProducts } from "../../api/FetchProducts";
 import { Products } from "../../models/interfaces.ts";
-
 
 interface ProductsState {
   products: Products[];
@@ -9,20 +15,28 @@ interface ProductsState {
   error?: string;
 }
 
+/**
+ * Начальное состояние сегмента данных о продуктах.
+ */
 const initialState: ProductsState = {
   products: [],
   status: 'idle',
 };
 
-
+/**
+ * Асинхронное действие thunk для загрузки продуктов из удаленного источника.
+ */
 export const loadProducts = createAsyncThunk(
   'products/load',
-  async (): Promise<Products[] > => {
+  async (): Promise<Products[]> => {
     const response = await fetchProducts();
     return response.data || [];
   }
 );
 
+/**
+ * Slice для управления данными о продуктах, включая его редьюсеры и действия.
+ */
 const ProductsSlice = createSlice({
   name: 'products',
   initialState,
