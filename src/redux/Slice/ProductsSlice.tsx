@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { fetchProducts } from "../../api/FetchProducts";
 import { Products } from "../../models/interfaces.ts";
 
@@ -15,8 +15,7 @@ const initialState: ProductsState = {
 };
 
 export const loadProducts = createAsyncThunk('products/load', async () => {
-  const products = await fetchProducts();
-  return products;
+  return await fetchProducts();
 });
 
 

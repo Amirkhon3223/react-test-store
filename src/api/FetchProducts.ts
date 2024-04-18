@@ -1,8 +1,8 @@
 import axios from 'axios';
-
+import { environment } from "../environments/environment.ts";
 
 const apiClient = axios.create({
-  baseURL: 'https://fakestoreapi.com'
+  baseURL: environment.API_URL
 });
 
 export const fetchProducts = async () => {
@@ -14,5 +14,3 @@ export const fetchProducts = async () => {
     return [];
   }
 }
-
-

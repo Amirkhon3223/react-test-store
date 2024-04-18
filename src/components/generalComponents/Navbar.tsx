@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { openToggleCard } from "../../redux/Slice/ProductCartState.tsx";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/Store.tsx";
-import { Link } from "react-router-dom";  // Добавленный импорт
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const dispatch = useDispatch();

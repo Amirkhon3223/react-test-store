@@ -11,12 +11,10 @@ const initialState: CartState = {
   total: 0,
 };
 
-
 const updateTotal = (cartItems: CartItem[]) =>
   cartItems.reduce((total, item) => total + item.price * item.amount, 0);
 
 const cartState = createSlice({
-
   name: "card",
   initialState,
   reducers: {

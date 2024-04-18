@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://fakestoreapi.com'
+  API_URL: 'https://fakestoreapi.com'
 };

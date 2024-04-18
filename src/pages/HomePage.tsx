@@ -13,15 +13,13 @@ export const HomePage = () => {
     dispatch(loadProducts() as any);
   }, [dispatch]);
 
-  if (status === 'loading') return <div>Loading...</div>;
-  if (status === 'failed') return <div>Error loading products.</div>;
-  if (!products || products.length === 0) return <div>No products available.</div>;
-
   return (
     <div className="section grid lg:grid-cols-3 md:grid-cols-2 gap-6">
-      {products.map((item) => (
-        <ShoppingItems key={item.id} item={{...item, amount: 1}} />
-      ))}
+      {status === 'loading' ? <div>Loading...</div> :
+        status === 'failed' ? <div>Error loading products.</div> :
+          !products || products.length === 0 ? <div>No products available.</div> :
+            products.map((item) => <ShoppingItems key={item.id} item={{ ...item, amount: 1 }}/>)
+      }
     </div>
   );
 };
