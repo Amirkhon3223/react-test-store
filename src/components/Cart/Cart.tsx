@@ -23,7 +23,7 @@ export const Cart = () => {
                 <span className="uppercase text-[0.9rem] select-none">Продолжить покупку</span>
               </div>
               <div>
-                Shopping Bag ({cartItems.reduce((total, item) => total + item.amount, 0)})
+                Ваш багаж покупки ({cartItems.reduce((total, item) => total + item.amount, 0)})
               </div>
             </div>
           </div>

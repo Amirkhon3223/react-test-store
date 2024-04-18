@@ -23,10 +23,10 @@ export const ProductDetails = () => {
   if (!product) return <div>Product not found</div>;
 
   return (
-    <div className="min-h-screen w-full flex space-x-10 items-center justify-center p-4">
-      <div className="lg:flex items-center justify-center">
-        <Link to="/" className="self-start">
-          <button className="mb-4 bg-gray-200 text-black py-2 px-4 rounded">
+    <div className="min-h-screen max-w-7xl mx-auto flex space-x-10 items-center justify-center p-4">
+      <div className="lg:flex items-center justify-center relative">
+        <Link to="/" className="self-start absolute left-0 -top-16">
+          <button className="bg-grey p-3 button hover:bg-transparentDark hover:text-grey transition">
             Назад
           </button>
         </Link>
@@ -40,11 +40,10 @@ export const ProductDetails = () => {
           {product.price} <span className="font-bold">TJS</span>
         </div>
         <div className="max-w-[400px] mb-4">
-          <p>{product.description}</p>
-          <button className="bg-black text-white p-3 mt-3"
+          <p className="mb-4">{product.description}</p>
+          <button className="bg-grey p-3 button hover:bg-transparentDark hover:text-grey transition"
                   onClick={() => dispatch(add(product))}
-          >
-            Add to Cart
+          >Add To Cart
           </button>
         </div>
       </div>

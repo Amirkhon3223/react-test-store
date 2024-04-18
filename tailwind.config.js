@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        grey: "#E5E5CC",
+        grey: "#f9bf29",
         glass: "rgba(255, 255, 255, 0.45)",
         transparentDark: "rgba(0, 0, 0, 0.7)"
       }

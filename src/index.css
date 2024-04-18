@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.button {
+    width: 150px;
+}
+
 @layer base {
     @font-face {
         font-family: "Roboto";
