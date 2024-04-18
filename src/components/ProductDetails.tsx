@@ -1,5 +1,5 @@
-import { add } from "../redux/Slice/CartState";
-import { loadProducts } from "../redux/Slice/ProductsSlice";
+import { add } from "../redux/slice/CartSlice.tsx";
+import { loadProducts } from "../redux/slice/ProductsSlice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/Store.tsx";

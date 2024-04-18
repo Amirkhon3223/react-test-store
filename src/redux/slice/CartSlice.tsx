@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CartItem } from "../../models/interfaces";
 
-interface CartState {
+interface CartSlice {
   cartItems: CartItem[];
   total: number;
 }
 
-const initialState: CartState = {
+const initialState: CartSlice = {
   cartItems: [],
   total: 0,
 };

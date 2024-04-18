@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { ShoppingItems } from "../components/ShoppingItems";
-import { loadProducts } from "../redux/Slice/ProductsSlice";
+import { loadProducts } from "../redux/slice/ProductsSlice";
 import { RootState } from "../redux/Store";
 
 export const HomePage = () => {

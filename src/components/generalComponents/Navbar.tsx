@@ -1,6 +1,6 @@
 import { BiShoppingBag } from "react-icons/bi";
 import { useEffect, useState } from "react";
-import { openToggleCard } from "../../redux/Slice/ProductCartState.tsx";
+import { openToggleCard } from "../../redux/slice/ProductCartSlice.tsx";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/Store.tsx";
 import { Link } from "react-router-dom";

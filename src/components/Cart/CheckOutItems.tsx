@@ -1,6 +1,6 @@
 import { HiX } from "react-icons/hi";
 import { useDispatch } from "react-redux";
-import { increase, decrease, remove } from "../../redux/Slice/CartState.tsx";
+import { increase, decrease, remove } from "../../redux/slice/CartSlice.tsx";
 import { CartItem } from "../../models/interfaces.ts";
 
 const CheckOutItems = ({ item }: { item: CartItem }) => {

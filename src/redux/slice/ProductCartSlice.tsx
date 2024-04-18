@@ -4,7 +4,7 @@ const initialState = {
   isOpen: false,
 };
 
-const ProductCartState = createSlice({
+const ProductCartSlice = createSlice({
   name: "productCard",
   initialState,
   reducers: {
@@ -15,5 +15,5 @@ const ProductCartState = createSlice({
 });
 
 
-export const { openToggleCard } = ProductCartState.actions;
-export default ProductCartState.reducer;
+export const { openToggleCard } = ProductCartSlice.actions;
+export default ProductCartSlice.reducer;
