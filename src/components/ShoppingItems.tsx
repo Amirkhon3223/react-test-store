@@ -1,15 +1,14 @@
 import React from "react";
-import { CartItem } from "../models/interfaces.ts";
+import { CartItem } from "../models/interfaces";
 import { useDispatch } from "react-redux";
-import { add } from "../redux/slice/CartSlice.tsx";
 import { Link } from "react-router-dom";
+import { add } from "../redux/slice/CartSlice.tsx";
 
 interface ShoppingItemProps {
   item: CartItem;
 }
 
 export const ShoppingItems: React.FC<ShoppingItemProps> = ({ item }) => {
-
   const dispatch = useDispatch();
   const { image, price, title } = item;
 
@@ -26,9 +25,11 @@ export const ShoppingItems: React.FC<ShoppingItemProps> = ({ item }) => {
             <div className="text-sm font-bold mb-5 line-clamp-1">{title}</div>
             <div className="text-lg font-bold mb-3">{price + " "}TSJ</div>
           </div>
-          <button className="bg-grey p-3 button hover:bg-transparentDark hover:text-grey transition absolute bottom-3 right-3"
-                  onClick={() => dispatch(add(item))}
-          >Add To Cart
+          <button
+            className="bg-grey p-3 button hover:bg-transparentDark hover:text-grey transition absolute bottom-3 right-3"
+            onClick={() => dispatch(add(item))}
+          >
+            Add To Cart
           </button>
         </div>
       </div>

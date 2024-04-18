@@ -14,10 +14,14 @@ const initialState: ProductsState = {
   status: 'idle',
 };
 
-export const loadProducts = createAsyncThunk('products/load', async () => {
-  return await fetchProducts();
-});
 
+export const loadProducts = createAsyncThunk(
+  'products/load',
+  async (): Promise<Products[] > => {
+    const response = await fetchProducts();
+    return response.data || [];
+  }
+);
 
 const ProductsSlice = createSlice({
   name: 'products',

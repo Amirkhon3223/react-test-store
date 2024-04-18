@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { ShoppingItems } from "../components/ShoppingItems";
-import { loadProducts } from "../redux/slice/ProductsSlice";
-import { RootState } from "../redux/Store";
+import { Dispatch, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { ShoppingItems } from '../components/ShoppingItems';
+import { loadProducts } from '../redux/slice/ProductsSlice';
+import { AppThunk, RootState } from "../redux/Store";
 
 export const HomePage = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch() as Dispatch<AppThunk>;
   const products = useSelector((state: RootState) => state.products.products);
   const status = useSelector((state: RootState) => state.products.status);
 
   useEffect(() => {
-    dispatch(loadProducts() as any);
+    dispatch(loadProducts());
   }, [dispatch]);
 
   return (

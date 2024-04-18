@@ -31,7 +31,7 @@ export const Cart = () => {
             {
               cartItems.length === 0 ? (
                 <div className="uppercase text-center text-3xl">
-                  Карзина Пустая
+                  Корзина Пустая
                 </div>
               ) : (
                 <>
