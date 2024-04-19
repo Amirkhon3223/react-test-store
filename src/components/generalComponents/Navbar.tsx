@@ -39,7 +39,7 @@ export const Navbar = () => {
           <div className="flex items-center justify-between space-x-10">
             <div className="relative cursor-pointer" onClick={() => dispatch(openToggleCard())}>
               <BiShoppingBag
-                className={`${scroll ? "dark:text-transparentDark" : "text-grey"} text-3xl dark:text-grey`}/>
+                className={`${scroll ? "dark:text-transparentDark" : "text-grey"} text-3xl dark:text-grey text-transparentDark`}/>
               <div className={`${scroll ? "dark:text-grey" : "text-transparentDark"} absolute w-4 h-4 rounded-full z-20 right-[-3px] bottom-[-3px] flex
                             items-center justify-center text-[10px] bg-black text-white dark:text-grey`}
               >
@@ -48,7 +48,7 @@ export const Navbar = () => {
             </div>
             <div>
               <button onClick={() => setDarkTheme(!darkTheme)}
-                      className={`${scroll ? "dark:text-transparentDark" : "text-grey"} dark:text-grey`}>
+                      className={`${scroll ? "dark:text-transparentDark" : "text-grey"} dark:text-grey text-transparentDark`}>
                 {
                   darkTheme ?
                     <BiSun className="inline mr-2 text-3xl"/> : <BiMoon className="inline mr-2 text-3xl"/>
