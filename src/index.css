@@ -7,6 +7,16 @@
     width: 150px;
 }
 
+.dark .button {
+    background-color: #000000;
+    color: #f9bf29;
+}
+
+.dark body {
+    background-color: #222;
+    color: white;
+}
+
 @layer base {
     @font-face {
         font-family: "Roboto";

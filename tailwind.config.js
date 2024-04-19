@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class', // Включение темной темы через классы
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
