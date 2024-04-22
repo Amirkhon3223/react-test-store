@@ -1,7 +1,7 @@
 import { HiX } from "react-icons/hi";
 import { useDispatch } from "react-redux";
-import { increase, decrease, remove } from "../../redux/slice/CartSlice.tsx";
-import { CartItem } from "../../models/interfaces.ts";
+import { increase, decrease, remove } from "../../redux/slice/CartSlice";
+import { CartItem } from "../../models/interfaces";
 
 const CheckOutItems = ({ item }: { item: CartItem }) => {
   const dispatch = useDispatch();

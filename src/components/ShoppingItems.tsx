@@ -2,7 +2,7 @@ import React from "react";
 import { CartItem } from "../models/interfaces";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { add } from "../redux/slice/CartSlice.tsx";
+import { add } from "../redux/slice/CartSlice";
 
 interface ShoppingItemProps {
   item: CartItem;

@@ -1,9 +1,9 @@
 import { HiChevronLeft } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
-import { openToggleCard } from "../../redux/slice/ProductCartSlice.tsx";
+import { openToggleCard } from "../../redux/slice/ProductCartSlice";
 
-import { RootState } from "../../redux/Store.tsx";
-import CheckOutItems from "./CheckOutItems.tsx";
+import { RootState } from "../../redux/Store";
+import CheckOutItems from "./CheckOutItems";
 
 
 export const Cart = () => {

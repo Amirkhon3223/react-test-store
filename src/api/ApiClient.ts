@@ -1,6 +1,5 @@
 import axios, { AxiosError } from 'axios';
-import { environment } from "../environments/environment.prod.ts";
-import { RequestParams, ResponseData } from "../models/ApiInterfaces.ts";
+import { RequestParams, ResponseData } from "../models/ApiInterfaces";
 
 /**
  * @fileoverview
@@ -15,9 +14,8 @@ import { RequestParams, ResponseData } from "../models/ApiInterfaces.ts";
  * Создаёт экземпляр axios с базовым URL, взятым из переменных окружения.
  */
 const apiClient = axios.create({
-  baseURL: environment.API_URL
+  baseURL: import.meta.env.VITE_API_URL,
 });
-
 
 /**
  * Обрабатывает ошибки HTTP-запросов.

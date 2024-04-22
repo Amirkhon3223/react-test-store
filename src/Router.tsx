@@ -1,5 +1,5 @@
-import { HomePage } from "./pages/HomePage.tsx";
-import { ProductDetails } from "./pages/ProductDetails.tsx";
+import { HomePage } from "./pages/HomePage";
+import { ProductDetails } from "./pages/ProductDetails";
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./Layout";
 
